@@ -1,0 +1,7 @@
+{
+  "name": "ERFOLGS TRACKING ONLINE",
+  "description": "Sistem pelacakan resi paket real-time untuk manajemen inventaris multi-toko di Shopee, TikTok, dan Lazada.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
