@@ -41,15 +41,10 @@ function cn(...inputs: ClassValue[]) {
 // Gunakan environment variable untuk base URL
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
 
-const response = await fetch(`${API_BASE_URL}/api/auth/login`, {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify(credentials)
-});
-
 const api = {
   async request(method: string, path: string, body?: any, token?: string, retries = 10): Promise<any> {
-    const url = `${API_URL}/api${path}`;
+    // ✅ CORRECT
+const url = `${API_BASE_URL}/api${path}`;
     const options: RequestInit = {
       method,
       headers: {
